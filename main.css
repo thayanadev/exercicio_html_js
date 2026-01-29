@@ -22,6 +22,15 @@ h1 {
     color: #4c6faf;     /* Cor do título */
 }
 
+h2 {
+    text-align: center; /* Centraliza o texto */
+    color: #ffffff;     /* Cor do subtítulo */
+    font-weight: normal; /* Peso normal */
+    margin-top: -10px;  /* Ajusta espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-size: 16px;     /* Tamanho da fonte */
+}
+
 /* Container principal */
 #container {
     width: 600px;               /* Largura fixa */
@@ -75,7 +84,7 @@ button {
 /* ========== EFEITO DE RECOLHER / EXPANDIR ========== */
 
 /* Formulário fechado */
-#formulario {
+#formulario, h2 {
     max-height: 0;      /* Altura zero (recolhido) */
     overflow: hidden;   /* Esconde conteúdo excedente */
     opacity: 0;         /* Invisível */
@@ -85,7 +94,7 @@ button {
 }
 
 /* Formulário aberto ao passar o mouse */
-#container:hover #formulario {
+#container:hover #formulario, #container:hover h2 {
     max-height: 400px; /* Altura suficiente para inputs + mensagem */
     opacity: 1;        /* Visível */
 }
