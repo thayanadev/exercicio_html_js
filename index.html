@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Diz ao navegador que o documento é HTML5 -->
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o layout funcionar corretamente em celular -->
+
+    <title>B maior que A</title> <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="main.css">
+    <!-- Importa o arquivo CSS externo -->
+</head>
+
+<body>
+    <div id="container">
+        <!-- Container principal que centraliza e organiza o conteúdo -->
+
+        <h1>Formulário de Comparação</h1>
+        <!-- Título visível da página -->
+
+        <form id="formulario">
+            <!-- Formulário que será aberto/fechado no hover -->
+
+            <input type="number" id="a" placeholder="Digite o valor de A">
+            <!-- Campo numérico para o valor A -->
+
+            <input type="number" id="b" placeholder="Digite o valor de B">
+            <!-- Campo numérico para o valor B -->
+
+            <button type="submit">Comparar</button>
+            <!-- Botão que envia o formulário -->
+
+            <p class="mensagem" id="mensagem"></p>
+            <!-- Parágrafo onde o resultado será exibido -->
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- Importa o JavaScript (sempre no final do body) -->
+</body>
+</html>

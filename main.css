@@ -1,0 +1,91 @@
+/* Remove comportamentos padrões e define base visual */
+* {
+    box-sizing: border-box; /* Padding e borda não alteram o tamanho final */
+    font-family: 'Segoe UI', sans-serif; /* Fonte padrão da página */
+}
+
+/* Garante que o fundo ocupe a tela inteira */
+html, body {
+    height: 100%; /* Altura total */
+    margin: 0;    /* Remove margens padrão */
+}
+
+/* Fundo com degradê */
+body {
+    min-height: 100vh; /* Garante 100% da altura da viewport */
+    background: linear-gradient(135deg, #66cccc, #6590df); /* Degradê */
+}
+
+/* Título */
+h1 {
+    text-align: center; /* Centraliza o texto */
+    color: #4c6faf;     /* Cor do título */
+}
+
+/* Container principal */
+#container {
+    width: 600px;               /* Largura fixa */
+    margin: 160px auto;         /* Centraliza horizontalmente */
+    padding: 20px;              /* Espaçamento interno */
+    border: 2px solid #ffffff;  /* Borda branca */
+    border-radius: 5px;         /* Cantos arredondados */
+}
+
+/* ================= FORMULÁRIO ================= */
+
+/* Estilo base do formulário */
+#formulario {
+    display: flex;              /* Flexbox */
+    flex-direction: column;     /* Elementos em coluna */
+    padding: 2px;
+    margin: 2px;
+}
+
+/* Inputs e botão */
+input, button {
+    display: block;     /* Um por linha */
+    padding: 8px;       /* Espaçamento interno */
+    margin-bottom: 8px; /* Espaço entre elementos */
+    width: 100%;        /* Largura total */
+}
+
+/* Inputs */
+input {
+    border: 2px solid #6590df; /* Borda azul */
+    border-radius: 4px;        /* Cantos arredondados */
+}
+
+/* Botão */
+button {
+    background-color: #4c6faf; /* Fundo do botão */
+    border: none;              /* Remove borda */
+    color: white;              /* Cor do texto */
+    font-weight: bold;         /* Texto em negrito */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-size: 18px;           /* Tamanho da fonte */
+    cursor: pointer;           /* Cursor de mão */
+}
+
+/* Mensagem de resultado */
+.mensagem {
+    display: none;      /* Escondida inicialmente */
+    margin-top: 10px;   /* Espaço acima */
+}
+
+/* ========== EFEITO DE RECOLHER / EXPANDIR ========== */
+
+/* Formulário fechado */
+#formulario {
+    max-height: 0;      /* Altura zero (recolhido) */
+    overflow: hidden;   /* Esconde conteúdo excedente */
+    opacity: 0;         /* Invisível */
+    transition: 
+        max-height 0.5s ease,
+        opacity 0.3s ease; /* Animação suave */
+}
+
+/* Formulário aberto ao passar o mouse */
+#container:hover #formulario {
+    max-height: 400px; /* Altura suficiente para inputs + mensagem */
+    opacity: 1;        /* Visível */
+}
